@@ -16,7 +16,7 @@ const ProgressBar = () => {
 
   const {activeQuestionNumber, totalQuestions} = useQuestionContext()
   const progressText = useMemo(
-    () => `${((activeQuestionNumber / totalQuestions) * 100).toFixed(2)}`,
+    () => `${((activeQuestionNumber / totalQuestions) * 100).toFixed(2)}%`,
     [activeQuestionNumber, totalQuestions]
   )
   const isFinalQuestion = activeQuestionNumber === totalQuestions;
@@ -27,7 +27,7 @@ const ProgressBar = () => {
       max={totalQuestions}
       className={clsx("progress-bar", isFinalQuestion && "final-question")}
     >
-      {((activeQuestionNumber / totalQuestions) * 100).toFixed(2)}%
+      {progressText}
     </progress>
   )
 }
