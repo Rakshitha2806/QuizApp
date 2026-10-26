@@ -69,7 +69,7 @@ const ResultScreen = ({ showQuestionScreen }) => {
           <img src={Trophy} alt="Trophy" />
         </div>
 
-        <h1 className='result-text'>You Could Have Done Better</h1>
+        <h1 className='result-text'>{feedbackText}</h1>
 
         <div className='result-details'>
           <span className='correct-answers'>{correctAnswers}</span>
